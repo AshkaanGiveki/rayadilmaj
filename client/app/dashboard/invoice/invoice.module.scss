@@ -1,0 +1,2340 @@
+@import "../../../styles/main.scss";
+
+.invoice {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: row;
+    direction: rtl;
+    height: 100%;
+
+}
+
+.pageTitle {
+    float: right;
+    margin: 30px 0% 20px 0%;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.MainSection {
+    width: calc(60% - 20px);
+
+    .scrollable {
+        overflow-y: auto;
+        width: 100%;
+        // padding-right:20px;
+        max-height: 90vh;
+        direction: ltr;
+        padding-bottom: 40px;
+
+        .section {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            direction: rtl;
+            flex-direction: row;
+
+
+            &.invoiceInfo {
+                flex-direction: row;
+                gap: 0px;
+            }
+        }
+    }
+}
+
+.SuppSection {
+    width: calc(40% - 20px);
+    border-radius: 10px;
+    margin-top: 100px;
+
+    .payments {
+        width: 100%;
+        height: 275px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        position: relative;
+        container-type: inline-size;
+        container-name: paymentsContainer;
+
+        .header {
+            height: 40px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            border-radius: 10px 10px 0 0;
+
+            h1 {
+                height: 40px;
+                font-size: 0.9rem;
+                line-height: 40px;
+                width: 40%;
+                margin-right: 10px;
+            }
+
+            .addBtn {
+                position: absolute;
+                top: 5px;
+                height: 30px;
+                left: 5px;
+                width: 100px;
+                padding: 0 10px;
+                line-height: 30px;
+                border-radius: 5px;
+                text-align: center;
+                background-color: $colMain;
+                color: black;
+                font-size: 0.8rem;
+                cursor: pointer;
+                opacity: 0.8;
+                display: block;
+                font-family: IranSansMedium;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &.deactive {
+                    display: none;
+                }
+            }
+        }
+
+        .paymentDataFrame {
+            width: 100%;
+            height: calc(100% - 41px);
+            overflow-y: auto;
+            border-radius: 0 0 10px 10px;
+
+            .paymentList {
+                width: 100%;
+
+                .paymentItem {
+                    height: 40px;
+                    width: 100%;
+                    list-style: none;
+                    border-bottom: 1px solid #eee;
+
+                    >* {
+                        margin: 0 0px 0 10px;
+                        text-align: center;
+                    }
+
+
+                    .method {
+                        float: right;
+                        height: 100%;
+                        font-size: 0.8rem;
+                        line-height: 40px;
+                        font-family: "IranSansRegular";
+                        width: 70px;
+                        margin-right: 10px;
+                    }
+
+                    .value {
+                        float: right;
+                        height: 100%;
+                        font-size: 0.8rem;
+                        line-height: 40px;
+                        font-family: "IranSansRegular";
+                        width: calc(30% - 60px);
+                    }
+
+                    .date {
+                        float: right;
+                        height: 100%;
+                        font-size: 0.8rem;
+                        line-height: 40px;
+                        font-family: "IranSansRegular";
+                        width: 70px;
+                    }
+
+                    .edit {
+                        width: 14px;
+                        height: 14px;
+                        margin: 13px 3px;
+                        opacity: 0.6;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .delete {
+                        width: 14px;
+                        height: 14px;
+                        margin: 13px 3px;
+                        opacity: 0.6;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .description {
+                        float: right;
+                        height: 100%;
+                        line-height: 40px;
+                        font-size: 0.8rem;
+                        font-family: "IranSansRegular";
+                        text-align: center;
+                        width: calc(30% - 70px);
+                    }
+
+                    .admin {
+                        float: right;
+                        height: 100%;
+                        width: calc(40% - 110px);
+                        line-height: 40px;
+                        font-size: 0.8rem;
+                        font-family: "IranSansRegular";
+                    }
+
+                    &:nth-child(even) {
+                        background-color: #fdfdfd;
+                    }
+
+                    &:hover {
+                        background-color: #fafafa;
+                    }
+
+                    &.deposit {
+                        border-right: 3px solid rgb(20, 105, 58);
+                    }
+
+                    &.withdraw {
+                        border-right: 3px solid rgb(221, 42, 42);
+                    }
+                }
+
+
+            }
+        }
+
+        .noPaymentHistory {
+            width: 100%;
+            height: calc(100% - 41px);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+            opacity: 0.4;
+
+            >img {
+                width: 80px;
+                height: 80px;
+            }
+
+            >h4 {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+        }
+
+        .addPayment {
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+            height: calc(100% - 41px);
+            position: absolute;
+            opacity: 1;
+            top: 40px;
+            display: none;
+            right: 0px;
+            background-color: white;
+
+            .return {
+                position: absolute;
+                left: 36px;
+                cursor: pointer;
+                top: -28px;
+                width: 16px;
+                height: 16px;
+                display: none;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &.active {
+                    display: block;
+                }
+
+            }
+
+            .row {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                margin: 10px 5%;
+                height: 40px;
+                flex-direction: row;
+                direction: rtl;
+
+                .halfSelectFrame {
+                    height: 40px;
+                    width: calc(50% - 5px);
+                }
+
+                .selectFrame {
+                    height: 40px;
+                    width: 100%;
+                }
+
+                &:has(textArea) {
+                    height: max-content;
+                }
+
+                .selectFrame:has(textArea) {
+                    height: max-content;
+                }
+
+                textArea {
+                    width: 100% !important;
+                }
+
+            }
+
+            .confirm {
+                width: 90%;
+                margin: 0px 5% 20px 5%;
+                height: 40px;
+                float: right;
+                background-color: #f9f9f9;
+                border: 1px solid #eee;
+                background-color: $colMain;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: IRanSansMedium;
+                font-size: 0.9rem;
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+
+    .prices {
+        border-radius: 10px;
+        border: 1px solid #eee;
+        overflow: hidden;
+        margin-top: 30px;
+        height: 210px;
+        container-type: inline-size;
+        container-name: pricesContainer;
+
+        .body {
+            height: calc(100% - 80px);
+            width: 100%;
+            overflow-y: auto;
+            direction: rtl;
+
+
+
+
+        }
+
+        .line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            direction: rtl;
+            height: 39px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+
+            .item {
+                padding: 0 20px;
+                text-align: center;
+                font-size: 0.9rem;
+                height: 100%;
+                margin: 0 10px;
+                line-height: 39px;
+
+            }
+
+            .item.itemTitle {
+                width: calc(100% - 140px);
+                padding-right: 10px;
+                position: relative;
+                text-align: right;
+
+                &:hover {
+                    .titleEdit {
+                        opacity: 1;
+                    }
+                }
+
+                .titleEdit {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    right: 8px;
+                    top: 12px;
+                    opacity: 0.3;
+                }
+
+                input {
+                    outline: none;
+                    border: none;
+                    font-family: iransansRegular;
+                }
+
+                &:has(.titleEdit) {
+                    cursor: pointer;
+                }
+            }
+
+            .item.itemNumber {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                direction: rtl;
+                flex-direction: row;
+                cursor: pointer;
+                width: 16px;
+                margin: 0 10px;
+                color: #444;
+
+
+
+                &:hover {
+                    .edit {
+                        opacity: 1;
+                    }
+                }
+
+
+                .edit {
+                    width: 16px;
+                    height: 16px;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    opacity: 0.3;
+                }
+            }
+
+            .item.itemLang {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                direction: ltr;
+                flex-direction: row;
+                cursor: pointer;
+                gap: 10px;
+                width: 80px;
+                margin: 0 10px;
+
+                >img {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+
+                    &:nth-child(2) {
+                        width: 14px;
+                        height: 14px;
+                        opacity: 0.4;
+                        border-radius: 0;
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+
+            .item.itemEdit {
+                width: 20px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                opacity: 0.5;
+                padding: 0px 10px;
+
+                >img {
+                    width: 16px;
+                    height: 16px;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .item.itemDelete {
+                width: 20px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+
+                padding: 0px 10px;
+
+                >img {
+                    width: 16px;
+                    height: 16px;
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    >img {
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+            .item.finalPrice {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                direction: rtl;
+                flex-direction: row;
+                cursor: pointer;
+                text-align: left;
+                position: relative;
+                width: 100px;
+                margin: 0 10px;
+
+
+
+                &:hover {
+                    .edit {
+                        opacity: 1;
+                    }
+                }
+
+                .quantity {
+                    font-size: 0.85rem;
+                }
+
+
+                .edit {
+                    width: 16px;
+                    height: 16px;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    opacity: 0.3;
+                }
+
+                input {
+                    width: 20px;
+                    border: none;
+                    outline: none;
+                    line-height: 20px;
+                    cursor: pointer;
+                }
+
+                .titleEdit {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    right: 0px;
+                    top: 10px;
+                    opacity: 0.3;
+
+                }
+
+                &:hover {
+                    .titleEdit {
+                        opacity: 1;
+                    }
+                }
+
+                &:has(.titleEdit) {
+                    cursor: pointer;
+                }
+            }
+
+
+            &:nth-child(even) {
+                background-color: #fdfdfd;
+            }
+
+            &:hover {
+                background-color: #fafafa;
+            }
+
+            &.header {
+                border-bottom: 1px solid #eee;
+                background-color: #f9f9f9;
+                border-radius: 10px 10px 0 0;
+                position: relative;
+                height: 40px;
+
+                .title {
+                    margin-right: 10px;
+                    font-size: 0.9rem;
+                    line-height: 40px;
+                    width: 40%;
+                    margin-right: 10px;
+                    font-family: IranSansRegular;
+                }
+
+                .addBtn {
+                    position: absolute;
+                    top: 5px;
+                    height: 30px;
+                    left: 5px;
+                    width: max-content;
+                    padding: 0 10px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    text-align: center;
+                    background-color: $colMain;
+                    color: black;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    display: block;
+                    font-family: IranSansMedium;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .item {
+                    font-family: "IRanSansRegular";
+                    font-size: 0.9rem;
+                }
+
+                .item:nth-child(2) {
+                    align-items: flex-start;
+                }
+
+            }
+
+            .emergency {
+                font-family: IransansRegular;
+                font-size: 0.85rem;
+            }
+
+            &.summary {
+                background-color: #fff;
+                border-top: 1px dashed #ddd;
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                float: right;
+                justify-content: flex-end;
+                font-family: IransansMedium;
+                font-size: 0.85rem;
+                padding: 0 20px;
+                border-radius: 0 0 10px 10px;
+
+            }
+
+
+        }
+
+        .noConfirmedDocs {
+            width: 100%;
+            height: calc(100% - 40px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+            opacity: 0.4;
+
+            >img {
+                width: 80px;
+                height: 80px;
+            }
+
+            >h4 {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+        }
+    }
+
+    .financial {
+        border-radius: 10px;
+        border: 1px solid #eee;
+        overflow: hidden;
+        margin-top: 30px;
+        // height: 198px;
+
+        .body {
+            height: calc(100% - 80px);
+            width: 100%;
+            overflow-y: auto;
+            direction: rtl;
+        }
+
+        .line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            direction: rtl;
+            height: 39px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+
+            .item {
+                padding: 0 20px;
+                text-align: center;
+                font-size: 0.9rem;
+                height: 100%;
+                margin: 0 10px;
+                line-height: 39px;
+
+            }
+
+            .item.itemTitle {
+                width: calc(100% - 140px);
+                padding-right: 10px;
+                position: relative;
+                text-align: right;
+
+                &:hover {
+                    .titleEdit {
+                        opacity: 1;
+                    }
+                }
+
+                .titleEdit {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    right: 8px;
+                    top: 12px;
+                    opacity: 0.3;
+                }
+
+                input {
+                    outline: none;
+                    border: none;
+                    font-family: iransansRegular;
+                }
+
+                &:has(.titleEdit) {
+                    cursor: pointer;
+                }
+            }
+
+            .item.itemNumber {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                direction: rtl;
+                flex-direction: row;
+                cursor: pointer;
+                width: 16px;
+                margin: 0 10px;
+                color: #444;
+
+
+
+                &:hover {
+                    .edit {
+                        opacity: 1;
+                    }
+                }
+
+
+                .edit {
+                    width: 16px;
+                    height: 16px;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    opacity: 0.3;
+                }
+            }
+
+            .item.itemLang {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                direction: ltr;
+                flex-direction: row;
+                cursor: pointer;
+                gap: 10px;
+                width: 80px;
+                margin: 0 10px;
+
+                >img {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+
+                    &:nth-child(2) {
+                        width: 14px;
+                        height: 14px;
+                        opacity: 0.4;
+                        border-radius: 0;
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+
+            .item.itemEdit {
+                width: 20px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                opacity: 0.5;
+                padding: 0px 10px;
+
+                >img {
+                    width: 16px;
+                    height: 16px;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .item.itemDelete {
+                width: 20px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+
+                padding: 0px 10px;
+
+                >img {
+                    width: 16px;
+                    height: 16px;
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    >img {
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+            .item.finalPrice {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                direction: rtl;
+                flex-direction: row;
+                cursor: pointer;
+                text-align: left;
+                position: relative;
+                width: 100px;
+                margin: 0 10px;
+
+
+
+                &:hover {
+                    .edit {
+                        opacity: 1;
+                    }
+                }
+
+                .quantity {
+                    font-size: 0.85rem;
+                }
+
+
+                .edit {
+                    width: 16px;
+                    height: 16px;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    opacity: 0.3;
+                    position: absolute;
+                    left: 0px;
+                    top: 11px;
+                }
+
+                input {
+                    width: 20px;
+                    border: none;
+                    outline: none;
+                    line-height: 20px;
+                    cursor: pointer;
+                }
+
+                .titleEdit {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    right: 0px;
+                    top: 10px;
+                    opacity: 0.3;
+
+                }
+
+                &:hover {
+                    .titleEdit {
+                        opacity: 1;
+                    }
+                }
+
+                &:has(.titleEdit) {
+                    cursor: pointer;
+                }
+            }
+
+
+            &:nth-child(even) {
+                background-color: #fdfdfd;
+            }
+
+            &:hover {
+                background-color: #fafafa;
+            }
+
+            &.header {
+                border-bottom: 1px solid #eee;
+                background-color: #f9f9f9;
+                border-radius: 10px 10px 0 0;
+                position: relative;
+                height: 40px;
+
+                .title {
+                    margin-right: 10px;
+                    font-size: 0.9rem;
+                    line-height: 40px;
+                    width: 40%;
+                    margin-right: 10px;
+                    font-family: IranSansRegular;
+                }
+
+                .addBtn {
+                    position: absolute;
+                    top: 5px;
+                    height: 30px;
+                    left: 5px;
+                    width: max-content;
+                    padding: 0 10px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    text-align: center;
+                    background-color: $colMain;
+                    color: black;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    display: block;
+                    font-family: IranSansMedium;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .item {
+                    font-family: "IRanSansRegular";
+                    font-size: 0.9rem;
+                }
+
+                .item:nth-child(2) {
+                    align-items: flex-start;
+                }
+
+            }
+
+            .emergency {
+                font-family: IransansRegular;
+                font-size: 0.85rem;
+            }
+
+            &.summary {
+                background-color: #fff;
+                border-top: 1px dashed #ddd;
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                float: right;
+                justify-content: flex-end;
+                font-family: IransansMedium;
+                font-size: 0.85rem;
+                padding: 0 20px;
+                border-radius: 0 0 10px 10px;
+
+                .settled {
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 10px;
+                }
+
+                .settledText {
+                    color: #0D9446;
+                }
+            }
+
+
+
+        }
+
+        .noConfirmedDocs {
+            width: 100%;
+            height: calc(100% - 40px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+            opacity: 0.4;
+
+            >img {
+                width: 80px;
+                height: 80px;
+            }
+
+            >h4 {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+        }
+    }
+
+    .buttonSection {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        direction: rtl;
+        margin-top: 30px;
+
+        button {
+            width: calc(100%);
+            border: 1px solid black;
+            border: none;
+            height: 40px;
+            text-align: center;
+            background-color: $colMain;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: IransansMedium;
+            opacity: 0.8;
+            font-size: 0.9rem;
+
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:first-child {
+                background-color: rgb(0, 128, 75);
+                color: white
+            }
+
+            &.goToPreview {
+                background-color: #630000;
+            }
+        }
+    }
+}
+
+.tripleSelectFrame {
+    height: 40px;
+    width: calc(30% - 10px);
+
+    &.searchBox {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .invoice {
+        width: 90%;
+        margin: 0 5%;
+        height: 100%;
+        justify-content: flex-start;
+        overflow-y: auto;
+        gap: 0px;
+        flex-direction: column;
+    }
+
+
+    .MainSection {
+        width: 100%;
+        height: max-content;
+
+        .scrollable {
+            width: 100%;
+            max-height: max-content;
+            direction: ltr;
+            padding-bottom: 40px;
+
+            .section {
+                width: 100%;
+                height: max-content;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                direction: rtl;
+
+
+                &.invoiceInfo {
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .tripleSelectFrame {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .SuppSection {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 0px;
+        height: max-content;
+
+        .payments {
+            width: 100%;
+            height: 275px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            position: relative;
+            container-type: inline-size;
+            container-name: paymentsContainer;
+
+            .header {
+                height: 40px;
+                width: 100%;
+                background-color: #f9f9f9;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                border-radius: 10px 10px 0 0;
+
+                h1 {
+                    height: 40px;
+                    font-size: 0.9rem;
+                    line-height: 40px;
+                    width: 40%;
+                    margin-right: 10px;
+                }
+
+                .addBtn {
+                    position: absolute;
+                    top: 5px;
+                    height: 30px;
+                    left: 5px;
+                    width: 100px;
+                    padding: 0 10px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    text-align: center;
+                    background-color: $colMain;
+                    color: black;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    display: block;
+                    font-family: IranSansMedium;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.deactive {
+                        display: none;
+                    }
+                }
+            }
+
+            .paymentDataFrame {
+                width: 100%;
+                height: calc(100% - 41px);
+                overflow-y: auto;
+                border-radius: 0 0 10px 10px;
+
+                .paymentList {
+                    width: 100%;
+
+                    .paymentItem {
+                        height: 40px;
+                        width: 100%;
+                        list-style: none;
+                        border-bottom: 1px solid #eee;
+
+                        >* {
+                            margin: 0 0px 0 10px;
+                            text-align: center;
+                        }
+
+
+                        .method {
+                            float: right;
+                            height: 100%;
+                            font-size: 0.8rem;
+                            line-height: 40px;
+                            font-family: "IranSansRegular";
+                            width: 70px;
+                            margin-right: 10px;
+                        }
+
+                        .value {
+                            float: right;
+                            height: 100%;
+                            font-size: 0.8rem;
+                            line-height: 40px;
+                            font-family: "IranSansRegular";
+                            width: calc(30% - 60px);
+                        }
+
+                        .date {
+                            float: right;
+                            height: 100%;
+                            font-size: 0.8rem;
+                            line-height: 40px;
+                            font-family: "IranSansRegular";
+                            width: 70px;
+                        }
+
+                        .edit {
+                            width: 14px;
+                            height: 14px;
+                            margin: 13px 3px;
+                            opacity: 0.6;
+                            cursor: pointer;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
+                        .delete {
+                            width: 14px;
+                            height: 14px;
+                            margin: 13px 3px;
+                            opacity: 0.6;
+                            cursor: pointer;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
+                        .description {
+                            float: right;
+                            height: 100%;
+                            line-height: 40px;
+                            font-size: 0.8rem;
+                            font-family: "IranSansRegular";
+                            text-align: center;
+                            width: calc(30% - 70px);
+                        }
+
+                        .admin {
+                            float: right;
+                            height: 100%;
+                            width: calc(40% - 110px);
+                            line-height: 40px;
+                            font-size: 0.8rem;
+                            font-family: "IranSansRegular";
+                        }
+
+                        &:nth-child(even) {
+                            background-color: #fdfdfd;
+                        }
+
+                        &:hover {
+                            background-color: #fafafa;
+                        }
+
+                        &.deposit {
+                            border-right: 3px solid rgb(20, 105, 58);
+                        }
+
+                        &.withdraw {
+                            border-right: 3px solid rgb(221, 42, 42);
+                        }
+                    }
+                }
+            }
+
+            .noPaymentHistory {
+                width: 100%;
+                height: calc(100% - 41px);
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 0 0 10px 10px;
+                opacity: 0.4;
+
+                >img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                >h4 {
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+            }
+
+            .addPayment {
+                border-radius: 0 0 10px 10px;
+                width: 100%;
+                height: calc(100% - 41px);
+                position: absolute;
+                opacity: 1;
+                top: 40px;
+                display: none;
+                right: 0px;
+                background-color: white;
+
+                .return {
+                    position: absolute;
+                    left: 36px;
+                    cursor: pointer;
+                    top: -28px;
+                    width: 16px;
+                    height: 16px;
+                    display: none;
+                    opacity: 0.5;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+
+                }
+
+                .row {
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+                    margin: 10px 5%;
+                    height: 40px;
+                    flex-direction: row;
+                    direction: rtl;
+
+                    .halfSelectFrame {
+                        height: 40px;
+                        width: calc(50% - 5px);
+                    }
+
+                    .selectFrame {
+                        height: 40px;
+                        width: 100%;
+                    }
+
+                    &:has(textArea) {
+                        height: max-content;
+                    }
+
+                    .selectFrame:has(textArea) {
+                        height: max-content;
+                    }
+
+                    textArea {
+                        width: 100% !important;
+                    }
+
+                }
+
+                .confirm {
+                    width: 90%;
+                    margin: 0px 5% 20px 5%;
+                    height: 40px;
+                    float: right;
+                    background-color: #f9f9f9;
+                    border: 1px solid #eee;
+                    background-color: $colMain;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-family: IRanSansMedium;
+                    font-size: 0.9rem;
+                    opacity: 0.8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+
+        .prices {
+            border-radius: 10px;
+            border: 1px solid #eee;
+            overflow: hidden;
+            margin-top: 30px;
+            height: 210px;
+
+            .body {
+                height: calc(100% - 80px);
+                width: 100%;
+                overflow-y: auto;
+                direction: rtl;
+
+
+
+
+            }
+
+            .line {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                direction: rtl;
+                height: 39px;
+                background-color: #fff;
+                border-bottom: 1px solid #eee;
+
+                .item {
+                    padding: 0 20px;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    height: 100%;
+                    margin: 0 10px;
+                    line-height: 39px;
+
+                }
+
+                .item.itemTitle {
+                    width: calc(100% - 140px);
+                    padding-right: 10px;
+                    position: relative;
+                    text-align: right;
+
+                    &:hover {
+                        .titleEdit {
+                            opacity: 1;
+                        }
+                    }
+
+                    .titleEdit {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 8px;
+                        top: 12px;
+                        opacity: 0.3;
+                    }
+
+                    input {
+                        outline: none;
+                        border: none;
+                        font-family: iransansRegular;
+                    }
+
+                    &:has(.titleEdit) {
+                        cursor: pointer;
+                    }
+                }
+
+                .item.itemNumber {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    direction: rtl;
+                    flex-direction: row;
+                    cursor: pointer;
+                    width: 16px;
+                    margin: 0 10px;
+                    color: #444;
+
+
+
+                    &:hover {
+                        .edit {
+                            opacity: 1;
+                        }
+                    }
+
+
+                    .edit {
+                        width: 16px;
+                        height: 16px;
+                        float: right;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        opacity: 0.3;
+                    }
+                }
+
+                .item.itemLang {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    direction: ltr;
+                    flex-direction: row;
+                    cursor: pointer;
+                    gap: 10px;
+                    width: 80px;
+                    margin: 0 10px;
+
+                    >img {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+
+                        &:nth-child(2) {
+                            width: 14px;
+                            height: 14px;
+                            opacity: 0.4;
+                            border-radius: 0;
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                }
+
+                .item.itemEdit {
+                    width: 20px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 5px;
+                    opacity: 0.5;
+                    padding: 0px 10px;
+
+                    >img {
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .item.itemDelete {
+                    width: 20px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 5px;
+
+                    padding: 0px 10px;
+
+                    >img {
+                        width: 16px;
+                        height: 16px;
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        >img {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+                .item.finalPrice {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    direction: rtl;
+                    flex-direction: row;
+                    cursor: pointer;
+                    text-align: left;
+                    position: relative;
+                    width: 100px;
+                    margin: 0 10px;
+
+
+
+                    &:hover {
+                        .edit {
+                            opacity: 1;
+                        }
+                    }
+
+                    .quantity {
+                        font-size: 0.85rem;
+                    }
+
+
+                    .edit {
+                        width: 16px;
+                        height: 16px;
+                        float: right;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        opacity: 0.3;
+                    }
+
+                    input {
+                        width: 20px;
+                        border: none;
+                        outline: none;
+                        line-height: 20px;
+                        cursor: pointer;
+                    }
+
+                    .titleEdit {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 0px;
+                        top: 10px;
+                        opacity: 0.3;
+
+                    }
+
+                    &:hover {
+                        .titleEdit {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:has(.titleEdit) {
+                        cursor: pointer;
+                    }
+                }
+
+
+                &:nth-child(even) {
+                    background-color: #fdfdfd;
+                }
+
+                &:hover {
+                    background-color: #fafafa;
+                }
+
+                &.header {
+                    border-bottom: 1px solid #eee;
+                    background-color: #f9f9f9;
+                    border-radius: 10px 10px 0 0;
+                    position: relative;
+                    height: 40px;
+
+                    .title {
+                        margin-right: 10px;
+                        font-size: 0.9rem;
+                        line-height: 40px;
+                        width: 40%;
+                        margin-right: 10px;
+                        font-family: IranSansRegular;
+                    }
+
+                    .addBtn {
+                        position: absolute;
+                        top: 5px;
+                        height: 30px;
+                        left: 5px;
+                        width: max-content;
+                        padding: 0 10px;
+                        line-height: 30px;
+                        border-radius: 5px;
+                        text-align: center;
+                        background-color: $colMain;
+                        color: black;
+                        font-size: 0.8rem;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        display: block;
+                        font-family: IranSansMedium;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .item {
+                        font-family: "IRanSansRegular";
+                        font-size: 0.9rem;
+                    }
+
+                    .item:nth-child(2) {
+                        align-items: flex-start;
+                    }
+
+                }
+
+                .emergency {
+                    font-family: IransansRegular;
+                    font-size: 0.85rem;
+                }
+
+                &.summary {
+                    background-color: #fff;
+                    border-top: 1px dashed #ddd;
+                    width: 100%;
+                    height: 40px;
+                    text-align: left;
+                    float: right;
+                    justify-content: flex-end;
+                    font-family: IransansMedium;
+                    font-size: 0.85rem;
+                    padding: 0 20px;
+                    border-radius: 0 0 10px 10px;
+
+                }
+
+
+            }
+
+            .noConfirmedDocs {
+                width: 100%;
+                height: calc(100% - 40px);
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 0 0 10px 10px;
+                opacity: 0.4;
+
+                >img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                >h4 {
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+            }
+        }
+
+        .financial {
+            border-radius: 10px;
+            border: 1px solid #eee;
+            overflow: hidden;
+            margin-top: 30px;
+            // height: 198px;
+
+            .body {
+                height: calc(100% - 80px);
+                width: 100%;
+                overflow-y: auto;
+                direction: rtl;
+            }
+
+            .line {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                direction: rtl;
+                height: 39px;
+                background-color: #fff;
+                border-bottom: 1px solid #eee;
+
+                .item {
+                    padding: 0 20px;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    height: 100%;
+                    margin: 0 10px;
+                    line-height: 39px;
+
+                }
+
+                .item.itemTitle {
+                    width: calc(100% - 140px);
+                    padding-right: 10px;
+                    position: relative;
+                    text-align: right;
+
+                    &:hover {
+                        .titleEdit {
+                            opacity: 1;
+                        }
+                    }
+
+                    .titleEdit {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 8px;
+                        top: 12px;
+                        opacity: 0.3;
+                    }
+
+                    input {
+                        outline: none;
+                        border: none;
+                        font-family: iransansRegular;
+                    }
+
+                    &:has(.titleEdit) {
+                        cursor: pointer;
+                    }
+                }
+
+                .item.itemNumber {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    direction: rtl;
+                    flex-direction: row;
+                    cursor: pointer;
+                    width: 16px;
+                    margin: 0 10px;
+                    color: #444;
+
+
+
+                    &:hover {
+                        .edit {
+                            opacity: 1;
+                        }
+                    }
+
+
+                    .edit {
+                        width: 16px;
+                        height: 16px;
+                        float: right;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        opacity: 0.3;
+                    }
+                }
+
+                .item.itemLang {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    direction: ltr;
+                    flex-direction: row;
+                    cursor: pointer;
+                    gap: 10px;
+                    width: 80px;
+                    margin: 0 10px;
+
+                    >img {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+
+                        &:nth-child(2) {
+                            width: 14px;
+                            height: 14px;
+                            opacity: 0.4;
+                            border-radius: 0;
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                }
+
+                .item.itemEdit {
+                    width: 20px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 5px;
+                    opacity: 0.5;
+                    padding: 0px 10px;
+
+                    >img {
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .item.itemDelete {
+                    width: 20px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 5px;
+
+                    padding: 0px 10px;
+
+                    >img {
+                        width: 16px;
+                        height: 16px;
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        >img {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+                .item.finalPrice {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    direction: rtl;
+                    flex-direction: row;
+                    cursor: pointer;
+                    text-align: left;
+                    position: relative;
+                    width: 100px;
+                    margin: 0 10px;
+
+
+
+                    &:hover {
+                        .edit {
+                            opacity: 1;
+                        }
+                    }
+
+                    .quantity {
+                        font-size: 0.85rem;
+                    }
+
+
+                    .edit {
+                        width: 16px;
+                        height: 16px;
+                        float: right;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        opacity: 0.3;
+                        position: absolute;
+                        left: 0px;
+                        top: 11px;
+                    }
+
+                    input {
+                        width: 20px;
+                        border: none;
+                        outline: none;
+                        line-height: 20px;
+                        cursor: pointer;
+                    }
+
+                    .titleEdit {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 0px;
+                        top: 10px;
+                        opacity: 0.3;
+
+                    }
+
+                    &:hover {
+                        .titleEdit {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:has(.titleEdit) {
+                        cursor: pointer;
+                    }
+                }
+
+
+                &:nth-child(even) {
+                    background-color: #fdfdfd;
+                }
+
+                &:hover {
+                    background-color: #fafafa;
+                }
+
+                &.header {
+                    border-bottom: 1px solid #eee;
+                    background-color: #f9f9f9;
+                    border-radius: 10px 10px 0 0;
+                    position: relative;
+                    height: 40px;
+
+                    .title {
+                        margin-right: 10px;
+                        font-size: 0.9rem;
+                        line-height: 40px;
+                        width: 40%;
+                        margin-right: 10px;
+                        font-family: IranSansRegular;
+                    }
+
+                    .addBtn {
+                        position: absolute;
+                        top: 5px;
+                        height: 30px;
+                        left: 5px;
+                        width: max-content;
+                        padding: 0 10px;
+                        line-height: 30px;
+                        border-radius: 5px;
+                        text-align: center;
+                        background-color: $colMain;
+                        color: black;
+                        font-size: 0.8rem;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        display: block;
+                        font-family: IranSansMedium;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .item {
+                        font-family: "IRanSansRegular";
+                        font-size: 0.9rem;
+                    }
+
+                    .item:nth-child(2) {
+                        align-items: flex-start;
+                    }
+
+                }
+
+                .emergency {
+                    font-family: IransansRegular;
+                    font-size: 0.85rem;
+                }
+
+                &.summary {
+                    background-color: #fff;
+                    border-top: 1px dashed #ddd;
+                    width: 100%;
+                    height: 40px;
+                    text-align: left;
+                    float: right;
+                    justify-content: flex-end;
+                    font-family: IransansMedium;
+                    font-size: 0.85rem;
+                    padding: 0 20px;
+                    border-radius: 0 0 10px 10px;
+
+                    .settled {
+                        width: 24px;
+                        height: 24px;
+                        margin-left: 10px;
+                    }
+
+                    .settledText {
+                        color: #0D9446;
+                    }
+                }
+
+
+
+            }
+
+            .noConfirmedDocs {
+                width: 100%;
+                height: calc(100% - 40px);
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 0 0 10px 10px;
+                opacity: 0.4;
+
+                >img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                >h4 {
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+            }
+        }
+
+        .buttonSection {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            direction: rtl;
+            margin-top: 30px;
+
+            button {
+                width: calc(100%);
+                border: 1px solid black;
+                border: none;
+                height: 40px;
+                text-align: center;
+                background-color: $colMain;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: IransansMedium;
+                opacity: 0.8;
+                font-size: 0.9rem;
+
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:first-child {
+                    background-color: rgb(0, 128, 75);
+                    color: white
+                }
+
+                &.goToPreview {
+                    background-color: #630000;
+                }
+            }
+        }
+    }
+
+    .tripleSelectFrame {
+        height: 40px;
+        width: calc(30% - 10px);
+
+        &.searchBox {
+            width: 100%;
+        }
+    }
+}
+
+@container paymentsContainer (max-width: 503px) {
+    .SuppSection {
+
+        .payments {
+
+            .paymentDataFrame {
+
+                .paymentList {
+
+                    .paymentItem {
+                        width: 100%;
+
+                        .method {
+                            width: 70px;
+                        }
+
+                        .value {
+                            width: calc(45% - 95px);
+                        }
+
+                        .date {
+                            width: 70px;
+                        }
+
+                        .edit {
+                            width: 14px;
+                        }
+
+                        .delete {
+                            width: 14px;
+                        }
+
+                        .description {
+                            display: none !important;
+                        }
+
+                        .admin {
+                            width: calc(55% - 145px);
+                        }
+
+                        &:nth-child(even) {
+                            background-color: #fdfdfd;
+                        }
+
+                        &:hover {
+                            background-color: #fafafa;
+                        }
+
+                        &.deposit {
+                            border-right: 3px solid rgb(20, 105, 58);
+                        }
+
+                        &.withdraw {
+                            border-right: 3px solid rgb(221, 42, 42);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@container paymentsContainer (max-width: 420px) {
+    .SuppSection {
+
+        .payments {
+
+            .paymentDataFrame {
+
+                .paymentList {
+
+                    .paymentItem {
+                        width: 100%;
+
+                        .method {
+                            width: 70px;
+                        }
+
+                        .value {
+                            width: calc(45% - 45px);
+                        }
+
+                        .date {
+                            display: none !important;
+                        }
+
+                        .edit {
+                            width: 14px;
+                        }
+
+                        .delete {
+                            width: 14px;
+                        }
+
+                        .description {
+                            display: none !important;
+                        }
+
+                        .admin {
+                            width: calc(55% - 125px);
+                        }
+
+                        &:nth-child(even) {
+                            background-color: #fdfdfd;
+                        }
+
+                        &:hover {
+                            background-color: #fafafa;
+                        }
+
+                        &.deposit {
+                            border-right: 3px solid rgb(20, 105, 58);
+                        }
+
+                        &.withdraw {
+                            border-right: 3px solid rgb(221, 42, 42);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@container pricesContainer (max-width: 600px) {
+
+    .SuppSection {
+        .prices {
+
+            .line {
+
+                .item.itemTitle {
+                    width: calc(100% - 80px);
+                }
+
+                .item.itemNumber {
+                    width: 16px;
+                }
+
+                .item.itemLang {
+                    display: none;
+                }
+
+                .item.itemEdit {
+                    width: 20px;
+                }
+
+
+                .item.finalPrice {
+                    width: 120px;
+
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .SuppSection {
+        margin-bottom: 80px;
+    }
+}

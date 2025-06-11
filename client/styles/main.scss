@@ -1,0 +1,19 @@
+$colMain : #E4C139;
+
+$primary-color: #4a90e2;
+$background-light: #f8f9fa;
+$border-color: #d1d5db;
+$text-color: #333;
+$hover-bg: #e3e5e8;
+$selected-bg: #4a90e2;
+$selected-text: #fff;
+
+.nowrap{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.toColMain{
+    filter: invert(70%) sepia(33%) saturate(871%) hue-rotate(3deg) brightness(106%) contrast(83%);
+}

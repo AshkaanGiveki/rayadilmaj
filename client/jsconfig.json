@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve", // یا "react-jsx" یا "react"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+  }
+}

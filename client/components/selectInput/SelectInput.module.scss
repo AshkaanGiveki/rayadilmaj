@@ -1,0 +1,194 @@
+@import '@/styles/main.scss';
+
+.selectContainer {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    border-radius: 5px;
+
+    &:hover {
+        .listArrow {
+            opacity: 1;
+        }
+    }
+
+
+    .selectedBox {
+        display: block;
+        width: 100%;
+        padding: 0 10px 0 28px;
+        line-height: 40px;
+        text-align: right;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #eee;
+        height: 100%;
+        direction: rtl;
+        font-size: 0.9rem;
+
+        >input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+        }
+
+        &.error {
+            border: 1px solid rgba(179, 23, 23, 0.815);
+        }
+
+        &.alert {
+            border: 1px solid black;
+        }
+
+        &.success {
+            border: 1px solid rgb(7, 97, 60);
+        }
+
+        &.active {
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+    }
+
+    .listArrow {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 13px;
+        left: 7px;
+        // transform: translateY(-50%) rotateX(0deg);
+        opacity: 0.6;
+
+        &.active {
+            transform: rotateX(180deg);
+        }
+    }
+
+    .dropdownMenu {
+        height: max-content;
+        width: 100%;
+        border-radius: 5px;
+        position: absolute;
+        top: 50px;
+        background-color: #fafafa;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        max-height: 160px;
+        overflow-y: auto;
+        direction: rtl;
+        z-index: 1;
+
+        .option {
+            height: 40px;
+            width: 100%;
+            padding: 0 10px;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: right;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+
+            &:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+
+            &.selected {
+                border-right: 3px solid $colMain;
+                font-weight: 400;
+                transition: none;
+            }
+
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: not-allowed;
+              }
+              
+        }
+
+        .noResult {
+            height: 40px;
+            width: 100%;
+            padding: 0 10px;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: right;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    .message {
+        margin-top:4px;
+        font-size: 0.8rem;
+        font-family: IranSansRegular;
+        &.error {
+            color: rgba(179, 23, 23, 0.815);
+        }
+
+        &.alert {
+            color: black;
+        }
+
+        &.success {
+            color: rgb(7, 97, 60);
+        }
+    }
+}
+
+.searchInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: transparent;
+    padding: 0;
+    direction: rtl;
+}
+
+.iconWrapper {
+    height: 100%;
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    float: right;
+}
+
+.selectedText {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    direction: rtl;
+    color: #000;
+
+    &.placeholder {
+        color: #777;
+    }
+
+}
+
+.optionText {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.optionIconWrapper {
+    height: 100%;
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    float: right;
+}

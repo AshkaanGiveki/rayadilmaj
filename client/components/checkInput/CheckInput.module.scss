@@ -1,0 +1,52 @@
+.inputContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    direction: rtl;
+    gap: 5px;
+
+    .square {
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        border: 1px solid #eee;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+
+        .check {
+            width: 14px;
+            height: 14px;
+            opacity: 0;
+        }
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        &.active {
+            border: 1px solid #ccc;
+
+            .check {
+                opacity: 1;
+            }
+        }
+
+        &.locked {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+
+    .text {
+        text-align: right;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,273 @@
+.Navbar {
+    width: 60px;
+    transition: width 0.3s ease;
+    flex-shrink: 0;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+    // background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='58' height='100.23' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23000000ff'/><path d='M12.127 73.813l.013 5.643 4.893-2.81zm-6.01-3.47l16.928 9.773-16.93 9.777zm-6.02-3.476l28.967 16.725L.13 100.262zm16.97 23.616l-.015 5.643-4.893-2.81zm6.01-3.472L6.148 96.786l16.93 9.776zM.128 100.261l28.935 16.669m16.874-23.67l-.013-5.644-4.894 2.81zm6.01 3.47L35.02 86.956l16.931-9.775zM29 83.482l28.936-16.669.032 33.393m-28.904 2.834l4.881-2.834-4.88-2.832zm0 6.94V90.433l16.932 9.773zm0 6.952V83.482l28.904 16.724zM58 13.915l-4.882 2.833L58 19.582zm0-6.94v19.548l-16.932-9.774zm0-6.951v33.448L29.096 16.748m0-13.89l4.88-2.833-4.88-2.833zm0 6.94V-9.749L46.026.025zm0 6.95v-33.449L58 .024zM16.94 23.696l-4.894-2.81-.014 5.643zm6.01-3.47L6.02 29.998V10.448zM0 33.472L.033.08 28.97 16.75m-5.99-29.92L6.053-3.393l16.93 9.776zM28.97 16.75L29-16.644.033.08m40.966 23.615l.013 5.643 4.893-2.81zm-6.01-3.47l16.928 9.774-16.93 9.775zm22.947 13.248L29 50.143l-.031-33.394M16.97 43.197l-.013-5.643-4.894 2.81zm6.01 3.47L6.053 36.894l16.93-9.776zM29 50.143L.032 33.419l28.936-16.67m16.937 57.008l-4.893-2.81-.014 5.644zm6.01-3.47L34.988 80.06v-19.55zM29 64.035l-4.88 2.832L29 69.7zm0-6.942v19.549L12.07 66.867zM.097 66.867L29 50.143v33.449m16.938-43.228l-.013 5.644-4.894-2.811zm6.01-3.47L35.02 46.667l16.931 9.777zM29 50.143l28.936 16.67.032-33.394M.097 52.975l4.88-2.832-4.88-2.833zm0 6.942V40.368l16.931 9.775zm0 6.95V33.42'  stroke-linecap='square' stroke-width='1' stroke='%23201f1fff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.283' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23000000ff'/><path d='M46.189-20L57.736 0M46.189 20l11.547 20m-46.189 0l11.547 20M11.547 0l11.547 20m40.415 30H40.415M28.868 30H5.774m23.094-40H5.774m57.735 20H40.415m0 20L28.868 50m11.547-60L28.868 10m46.188 0L63.509 30M5.774 10L-5.773 30m75.056 10H46.189L34.64 20 46.19 0h23.094C73.13 6.667 76.98 13.333 80.83 20zM57.736 60H34.64L23.094 40l11.547-20h23.095c3.848 6.667 7.698 13.333 11.547 20L57.736 60zm0-40H34.64L23.094 0l11.547-20h23.095L69.283 0c-3.87 6.7-8.118 14.06-11.547 20zM34.64 60H11.547L0 40l11.547-20h23.094L46.19 40 34.64 60zm0-40H11.547L0 0l11.547-20h23.094L46.19 0 34.64 20zM23.094 40H0l-5.773-10-5.774-10L0 0h23.094l11.547 20-11.547 20z'  stroke-width='1' stroke='%23eabc3e44' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");    overflow: hidden;
+    
+    border-radius: 0;
+    z-index:1;
+
+
+
+    .LogoFrame {
+        width: 100%;
+        height: 140px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #ccb06c45;
+
+        .Logo {
+            height: 54px;
+            width: 54px;
+            margin: 40px 3px;
+            float: right;
+        }
+
+        .typo {
+            height: 120px;
+            width: 0px;
+            margin: 20px 0px 20px 0;
+            position: absolute;
+            right:80px;
+            top:-15px;
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    .ItemContainer {
+        height: max-content;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        top: 141px;
+        left: 0px;
+
+        .NavbarItems {
+            width: 100%;
+            height: 60px;
+            opacity: 0.6;
+            display: block;
+
+            .ItemIcon {
+                width: 22px;
+                height: 22px;
+                margin: 19px;
+                float: right;
+            }
+
+            .ItemTitle {
+                display: none;
+                height: 30px;
+                margin: 15px 5px;
+                color: #E9BA3E;
+                float: right;
+                position: absolute;
+                right: 60px;
+                width: 100px;
+                font-size: 0.9rem;
+                text-align: right;
+                line-height: 30px;
+                opacity: 0;
+
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .AvatarFrame{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .LogoutButton{
+        position: absolute;
+        bottom: 80px;
+        right: 10px;
+        width:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >img{
+            width: 24px;
+            opacity: 0.6;
+            height: 24px;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover {
+        width: 250px;
+
+        .ItemContainer .NavbarItems .ItemTitle {
+            display: block;
+            color: #E9BA3E;
+            width: 120px;
+            opacity: 1;
+
+        }
+
+        .LogoFrame .typo{
+            display: block;
+            opacity: 1;
+            width:120px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .Navbar {
+        height: 60px;
+        width: calc(100vw - 20px);
+        width: calc(100%);
+        position: fixed;
+        top: calc(100% - 70px);
+        top: calc(100% - 60px);
+        right: 10px;
+        right: 0;
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        border-radius: 0px;
+        z-index:100;
+
+        .LogoFrame {
+            width: 100%;
+            height: 140px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid #ccb06c45;
+            display: none;
+
+            .Logo {
+                height: 60px;
+                width: 60px;
+                margin: 40px 0px;
+                float: right;
+            }
+        }
+
+        .ItemContainer {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            .NavbarItems {
+                width: 50px;
+                height: calc(100% - 10px);
+                opacity: 1;
+                display: block;
+
+                .ItemIcon {
+                    width: 26px;
+                    height: 26px;
+                    margin: 12px;
+                    float: right;
+                }
+
+                .ItemTitle {
+                    display: none;
+                    height: 30px;
+                    margin: 15px 5px;
+                    color: #E9BA3E;
+                    float: right;
+                    position: absolute;
+                    right: 60px;
+                    width: 90px;
+                    font-size: 0.9rem;
+                    text-align: right;
+                    line-height: 30px;
+                    opacity: 0;
+
+                }
+
+
+                &:last-child {
+                    display: block;
+                }
+
+                &#list {
+                    order: 1;
+                }
+
+                &#contacts {
+                    order: 2;
+                }
+
+                &#add {
+                    order: 3;
+                    background-color: #E9BA3E;
+                    border-radius: 20px;
+                    height: calc(100% - 14px);
+                    width: 46px;
+
+                    img {
+                        filter: unset !important;
+                        width: 30px;
+                        height: 30px;
+                        margin: 8px;
+                    }
+
+                }
+
+                &#dataManagement {
+                    display: none;
+                }
+
+                &#settings {
+                    order: 4;
+                }
+
+                &#account {
+                    order: 5;
+                }
+            }
+
+        }
+
+        .AvatarFrame{
+            display: none;
+        }
+
+        &:hover {
+            width: calc(100vw - 20px);
+            width: calc(100vw - 0px);
+
+            .ItemContainer .NavbarItems .ItemTitle {
+                display: none;
+
+            }
+
+        }
+
+    }
+}

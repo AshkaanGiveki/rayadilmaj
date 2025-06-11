@@ -1,0 +1,444 @@
+.searchFrame{
+    width:30%;
+    height:40px;
+    min-width: 300px;
+    max-width:500px;
+    margin: 20px 5% 20px 0 ;
+    float: right;
+    >input{
+        background-color: #fafafa;
+    }
+}
+
+.newUser{
+    float: left;
+    width:40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    margin: 20px 0 20px 5%;
+    cursor: pointer;
+    >img{
+        width:24px;
+        height: 24px;
+        margin: 8px;
+        opacity: 0.5;
+    }
+
+    &:hover{
+        >img{
+            opacity: 1;
+        }
+    }
+}
+
+.pageTitle{
+    font-size: 2rem;
+    margin: 40px 5% 20px 0 ;
+    height:40px;
+    float: right;
+    width:90%;
+    text-align: right;
+}
+
+.table {
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10vh 5%;
+    overflow: hidden;
+
+
+    .listContainer {
+        width: 100%;
+        overflow: auto;
+        height: calc(100% - 61px);
+        direction: rtl;
+
+    }
+
+    .clients {
+        height: 60px;
+        width: max-content;
+        background-color: #fff;
+        min-width: 100%;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+
+
+        .item {
+            float: right;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            direction: rtl;
+            padding: 0 10px;
+            font-size: 0.8rem;
+            color: #333;
+
+
+            &.select {
+                width: 5%;
+                min-width:22px;
+
+                .square {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 4px;
+                    opacity: 0.6;
+                    cursor: pointer;
+                    border: 1px solid black;
+
+                    &.selected {
+                        background: url("../../../public/assets/images/check.png") no-repeat;
+                        background-size: 14px;
+                    }
+                }
+            }
+
+            &.name {
+                width: 17%;
+                min-width: 180px;
+            }
+
+            &.group {
+                width: 6%;
+                min-width: 60px;
+            }
+
+            &.homeNo {
+                width: 10%;
+                min-width: 90px;
+            }
+
+            &.phoneNo {
+                width: 10%;
+                min-width: 90px;
+            }
+
+            &.address {
+                width: 20%;
+                min-width: 220px;
+            }
+
+            &.lastUpdate {
+                width: 10%;
+                min-width: 90px;
+            }
+
+            &.description {
+                width: 14%;
+                min-width: 100px;
+            }
+
+            &.edit {
+                width: 4%;
+                min-width: 33px;
+
+                >img{
+                    width: 18px;
+                    height: 18px;
+                    cursor: pointer;
+                    opacity: 0.6;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.delete{
+                width: 4%;
+                min-width: 33px;
+
+                >img{
+                    width: 18px;
+                    height: 18px;
+                    cursor: pointer;
+                    opacity: 0.6;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &.header{
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            direction: rtl;
+            .item{
+                font-size: 0.9rem;
+                font-family: "iransansMedium";        
+                
+                &.edit{
+                    >img{
+                        display: none;
+                    }
+                    &.active{
+                        >img{
+                            display: block;
+                        }
+                    }
+                }
+
+                &.delete{
+                    >img{
+                        display: none;
+                    }
+                    &.active{
+                        >img{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    .table .clients .item{
+
+        &.lastUpdate{
+            display: none !important;
+        }
+
+        &.select {
+            width: 6%;
+        }
+
+        &.name {
+            width: 18%;
+        }
+
+        &.group {
+            width: 7%;
+        }
+
+        &.homeNo {
+            width: 11%;
+        }
+
+        &.phoneNo {
+            width: 11%;
+        }
+
+        &.address {
+            width: 21%;
+        }
+
+        &.description {
+            width: 16%;
+        }
+
+        &.edit {
+            width: 5%;
+        }
+
+        &.delete{
+            width: 5%;
+        }
+    }    
+}
+
+@media screen and (max-width: 1460px) {
+    .table .clients .item{
+        &.group{
+            display: none !important;
+        }
+        
+        &.select {
+            width: 6%;
+        }
+
+        &.name {
+            width: 19%;
+        }
+
+        &.homeNo {
+            width: 12%;
+        }
+
+        &.phoneNo {
+            width: 12%;
+        }
+
+        &.address {
+            width: 22%;
+        }
+
+        &.description {
+            width: 17%;
+        }
+
+        &.edit {
+            width: 6%;
+        }
+
+        &.delete{
+            width: 6%;
+        }
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    .table .clients .item{
+
+        &.description{
+            display: none !important;
+        }
+
+        &.select {
+            width: 8%;
+        }
+
+        &.name {
+            width: 21%;
+        }
+
+        &.homeNo {
+            width: 14%;
+        }
+
+        &.phoneNo {
+            width: 14%;
+        }
+
+        &.address {
+            width: 27%;
+        }
+
+        &.edit {
+            width: 8%;
+        }
+
+        &.delete{
+            width: 8%;
+        }
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .table .clients .item{
+
+        &.homeNo{
+            display: none !important;
+        }
+
+        &.select {
+            width: 8%;
+        }
+
+        &.name {
+            width: 26%;
+        }
+
+        &.phoneNo {
+            width: 18%;
+        }
+
+        &.address {
+            width: 32%;
+        }
+
+        &.edit {
+            width: 8%;
+        }
+
+        &.delete{
+            width: 8%;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .table .clients .item{
+        &.address{
+            display: none !important;
+        }
+
+        &.select {
+            width: 12%;
+        }
+
+        &.name {
+            width: 36%;
+        }
+
+        &.phoneNo {
+            width: 28%;
+        }
+
+        &.edit {
+            width: 12%;
+        }
+
+        &.delete{
+            width: 12%;
+        }
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .table .clients .item{
+        
+        &.edit{
+            display: none !important;
+        }
+
+        &.select {
+            width: 18%;
+        }
+
+        &.name {
+            width: 36%;
+        }
+
+        &.phoneNo {
+            width: 34%;
+        }
+
+        &.delete{
+            width: 12%;
+        }
+    }
+}
+
+@media screen  and (max-width: 720px)  {
+    .searchFrame{
+        margin: 30px 3% 20px 0%;
+    }
+
+    .newUser{
+        margin: 30px 0 20px 3%;
+    }
+    .pageTitle{
+        font-size: 1.5rem;
+        margin: 40px 3% 0px 0 ;
+        height:20px;
+
+    }
+
+    .table{
+        width: 94%;
+        height: calc(80vh - 70px);
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin: 10vh 3%;
+        overflow: hidden;
+    }
+    
+}

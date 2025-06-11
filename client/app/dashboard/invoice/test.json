@@ -1,0 +1,1262 @@
+{
+  "office": {
+    "id": "cm9r1plr60000drxqz0jrs5rs",
+    "name": "",
+    "slang": ""
+  },
+  "receptionDate": "2025-06-10T07:48:37.290Z",
+  "deliveryDate": "2025-06-11T07:48:37.290Z",
+  "submitTime": 1749541717290,
+  "customer": {
+    "id": "cmbd5gx9s004hdrjq3jr92v51",
+    "name": "رضا عباسی"
+  },
+  "invoiceId": 0,
+  "status": "PENDING",
+  "client": {
+    "id": null,
+    "name": ""
+  },
+  "extraExpenses": 0,
+  "draftDocs": [
+    {
+      "id": "cmbq7z96k002ddrsf378kyqgj",
+      "docTypeId": "cmatdudoq000mdrlvdba0qtbf",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": true,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 30,
+      "baseNo": 3,
+      "extraNo": 3,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 77760,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 5400,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 2404896,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "گواهی عدم سوء پیشینه (غیر فرمی)"
+    },
+    {
+      "id": "cmbq7zprk002mdrsf142id026",
+      "docTypeId": "cmatdudq6000xdrlv4cnf3pog",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "originLangName": "فارسی",
+      "originLangIcon": "flags/iran.png",
+      "destinationLangId": "cm9r230cf0008drxqdqze7p3k",
+      "destinationLangName": "عربی",
+      "destinationLangIcon": "flags/saudi-arabia.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": true,
+      "naatiSeal": true,
+      "emergency": 0,
+      "baseNo": 2,
+      "extraNo": 0,
+      "extraApprNo": 2,
+      "specialServNo": 1,
+      "extraPercent": 60,
+      "pricingRows": [
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 122400,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 2591680,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "پرانه دائم پزشکی"
+    },
+    {
+      "id": "cmbq812zs002udrsf0xwltt7u",
+      "docTypeId": "cmatdudpi000sdrlvim2fhcni",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": true,
+      "trSeal": false,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 2,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 0,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 0,
+      "isChanged": false,
+      "isConfirmed": true,
+      "docTypeTitle": "انواع قبض (مالیات، پرداخت بیمه، آب، برق و …)"
+    },
+    {
+      "id": "cmbq81nji0038drsf7q2h4nk8",
+      "docTypeId": "cmatdudm80004drlvkmf1wlwo",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0009drxq4exlmk6h",
+      "originLangName": "روسی",
+      "originLangIcon": "flags/russia.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 79200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 3240,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 379200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "جواز اشتغال به کار"
+    },
+    {
+      "id": "cmbq826ek003qdrsf1dciuzyg",
+      "docTypeId": "cmatdudpn000tdrlv5a7bbnb0",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": true,
+      "MFAppr": true,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 151200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 901200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "برگ تشخیص مالیات، مالیات قطعی"
+    },
+    {
+      "id": "cmbq82hg0003ydrsfjdzkbsll",
+      "docTypeId": "cmatdudqk0010drlvx733vlip",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "originLangName": "فارسی",
+      "originLangIcon": "flags/iran.png",
+      "destinationLangId": "cm9r230cf0006drxq9dge9nbf",
+      "destinationLangName": "پرتغالی",
+      "destinationLangIcon": "flags/portugal.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": true,
+      "naatiSeal": true,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 3,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 129600,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 874000,
+      "isChanged": false,
+      "isConfirmed": true,
+      "docTypeTitle": "پروانه وکالت"
+    },
+    {
+      "id": "cmbq81wlc003hdrsflctbnfdu",
+      "docTypeId": "cmatdudnm000edrlv9e5pploc",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 1080,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 79200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 379200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "کارت واکسیناسیون"
+    }
+  ],
+  "docs": [
+    {
+      "id": "cmbq7z96k002ddrsf378kyqgj",
+      "docTypeId": "cmatdudoq000mdrlvdba0qtbf",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": true,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 30,
+      "baseNo": 3,
+      "extraNo": 3,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 77760,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 5400,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 2404896,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "گواهی عدم سوء پیشینه (غیر فرمی)"
+    },
+    {
+      "id": "cmbq7zprk002mdrsf142id026",
+      "docTypeId": "cmatdudq6000xdrlv4cnf3pog",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "originLangName": "فارسی",
+      "originLangIcon": "flags/iran.png",
+      "destinationLangId": "cm9r230cf0008drxqdqze7p3k",
+      "destinationLangName": "عربی",
+      "destinationLangIcon": "flags/saudi-arabia.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": true,
+      "naatiSeal": true,
+      "emergency": 0,
+      "baseNo": 2,
+      "extraNo": 0,
+      "extraApprNo": 2,
+      "specialServNo": 1,
+      "extraPercent": 60,
+      "pricingRows": [
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 122400,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 2591680,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "پرانه دائم پزشکی"
+    },
+    {
+      "id": "cmbq812zs002udrsf0xwltt7u",
+      "docTypeId": "cmatdudpi000sdrlvim2fhcni",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": true,
+      "trSeal": false,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 2,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 0,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 0,
+      "isChanged": false,
+      "isConfirmed": true,
+      "docTypeTitle": "انواع قبض (مالیات، پرداخت بیمه، آب، برق و …)"
+    },
+    {
+      "id": "cmbq81nji0038drsf7q2h4nk8",
+      "docTypeId": "cmatdudm80004drlvkmf1wlwo",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0009drxq4exlmk6h",
+      "originLangName": "روسی",
+      "originLangIcon": "flags/russia.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 79200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 3240,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 379200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "جواز اشتغال به کار"
+    },
+    {
+      "id": "cmbq81wlc003hdrsflctbnfdu",
+      "docTypeId": "cmatdudnm000edrlv9e5pploc",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": false,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "specialService",
+          "title": "خدمات خاص",
+          "unitPrice": 1080,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 79200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 379200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "کارت واکسیناسیون"
+    },
+    {
+      "id": "cmbq826ek003qdrsf1dciuzyg",
+      "docTypeId": "cmatdudpn000tdrlv5a7bbnb0",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf000adrxq1bmqgcvy",
+      "originLangName": "ژاپنی",
+      "originLangIcon": "flags/japan.png",
+      "destinationLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "destinationLangName": "فارسی",
+      "destinationLangIcon": "flags/iran.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": true,
+      "MFAppr": true,
+      "naatiSeal": false,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 0,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 151200,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 901200,
+      "isChanged": true,
+      "isConfirmed": true,
+      "docTypeTitle": "برگ تشخیص مالیات، مالیات قطعی"
+    },
+    {
+      "id": "cmbq82hg0003ydrsfjdzkbsll",
+      "docTypeId": "cmatdudqk0010drlvx733vlip",
+      "docTypeName": "",
+      "originLangId": "cm9r230cf0001drxqlg2ac4nv",
+      "originLangName": "فارسی",
+      "originLangIcon": "flags/iran.png",
+      "destinationLangId": "cm9r230cf0006drxq9dge9nbf",
+      "destinationLangName": "پرتغالی",
+      "destinationLangIcon": "flags/portugal.png",
+      "unofficial": false,
+      "trSeal": true,
+      "MJAppr": false,
+      "MFAppr": true,
+      "naatiSeal": true,
+      "emergency": 0,
+      "baseNo": 1,
+      "extraNo": 3,
+      "extraApprNo": 0,
+      "specialServNo": 0,
+      "extraPercent": 50,
+      "pricingRows": [
+        {
+          "key": "trSeal",
+          "title": "مهر مترجم",
+          "unitPrice": 100000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MFAppr",
+          "title": "تاییدیه خارجه",
+          "unitPrice": 250000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "extraPercent",
+          "title": "درصد اضافی",
+          "unitPrice": 50,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "base",
+          "title": "تعرفه پایه",
+          "unitPrice": 129600,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "MJAppr",
+          "title": "تاییدیه دادگستری",
+          "unitPrice": 200000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        },
+        {
+          "key": "naatiSeal",
+          "title": "مهر ناتی",
+          "unitPrice": 300000,
+          "quantity": 0,
+          "visible": false,
+          "editable": true,
+          "system": true
+        }
+      ],
+      "description": "",
+      "finalPrice": 874000,
+      "isChanged": false,
+      "isConfirmed": true,
+      "docTypeTitle": "پروانه وکالت"
+    }
+  ],
+  "payments": [],
+  "newPayment": {
+    "flow": "IN",
+    "method": "CASH",
+    "value": "مبلغ به ریال",
+    "Date": 1749541717290,
+    "description": "",
+    "admin": ""
+  },
+  "price": 7530176,
+  "discount": 0,
+  "paid": 0,
+  "toPay": 7530176,
+  "id": "cmbq7z94l002bdrsf1mr0ts25",
+  "customerId": "cmbd5gx9s004hdrjq3jr92v51",
+  "officeId": "cm9r1plr60000drxqz0jrs5rs",
+  "clientId": "cma9mhd0g0000dr7azadwnck6",
+  "submissionForm": null,
+  "prescription": null,
+  "createdAt": "2025-06-10T07:48:58.484Z",
+  "updatedAt": "2025-06-10T07:48:58.484Z"
+}

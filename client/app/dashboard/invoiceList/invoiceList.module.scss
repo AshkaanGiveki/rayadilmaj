@@ -1,0 +1,332 @@
+.searchFrame{
+    width:30%;
+    height:40px;
+    min-width: 300px;
+    max-width:500px;
+    margin: 20px 5% 20px 0 ;
+    float: right;
+    >input{
+        background-color: #fafafa;
+    }
+}
+
+.pageTitle{
+    font-size: 2rem;
+    margin: 40px 5% 20px 0 ;
+    height:40px;
+    float: right;
+    width:90%;
+    text-align: right;
+}
+
+.table {
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10vh 5%;
+    overflow: hidden;
+
+
+    .listContainer {
+        width: 100%;
+        overflow: auto;
+        height: calc(100% - 61px);
+        direction: rtl;
+
+    }
+
+    .clients {
+        height: 60px;
+        width: max-content;
+        background-color: #fff;
+        min-width: 100%;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+
+
+        .item {
+            float: right;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            direction: rtl;
+            padding: 0 10px;
+            font-size: 0.8rem;
+            color: #333;
+
+
+            &.select {
+                width: 5%;
+                min-width:22px;
+
+                .square {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 4px;
+                    opacity: 0.6;
+                    cursor: pointer;
+                    border: 1px solid black;
+
+                    &.selected {
+                        background: url("../../../public/assets/images/check.png") no-repeat;
+                        background-size: 14px;
+                    }
+                }
+            }
+
+            &.name {
+                width: 25%;
+                min-width: 180px;
+            }
+
+            &.group {
+                width: 20%;
+                min-width: 60px;
+            }
+
+            &.homeNo {
+                width: 20%;
+                min-width: 90px;
+            }
+
+            &.phoneNo {
+                width: 15%;
+                min-width: 90px;
+            }
+
+            &.lastUpdate {
+                width: 15%;
+                min-width: 90px;
+            }
+
+            &.address {
+                width: 5%;
+                min-width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >img{
+                    width:20px;
+                    height: 20px;
+                    opacity: 0.6;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+        }
+
+        &:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &.header{
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            direction: rtl;
+            .item{
+                font-size: 0.9rem;
+                font-family: "iransansMedium";        
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    .table .clients .item{
+
+            &.name {
+                width: 30%;
+                min-width: 180px;
+            }
+
+            &.group {
+                width: 25%;
+                min-width: 60px;
+            }
+
+            &.homeNo {
+                display: none !important;
+            }
+
+            &.phoneNo {
+                width: 20%;
+                min-width: 90px;
+            }
+
+            &.lastUpdate {
+                width: 20%;
+                min-width: 90px;
+            }
+            
+            &.address {
+                width: 5%;
+                min-width: 40px;
+            }
+
+    }    
+}
+
+@media screen and (max-width: 1460px) {
+    .table .clients .item{
+        &.name {
+            width: 35%;
+            min-width: 180px;
+        }
+
+        &.group {
+            width: 30%;
+            min-width: 60px;
+        }
+
+        &.phoneNo {
+            display: none !important;
+        }
+
+        &.lastUpdate {
+            width: 25%;
+            min-width: 90px;
+        }
+        
+        &.address {
+            width: 10%;
+            min-width: 40px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    .table .clients .item{
+
+        &.name {
+            width: 50%;
+            min-width: 180px;
+        }
+
+        &.group {
+            display: none !important;
+        }
+
+
+        &.lastUpdate {
+            width: 40%;
+            min-width: 90px;
+        }
+        
+        &.address {
+            width: 10%;
+            min-width: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .table .clients .item{
+
+        &.name {
+            width: 50%;
+            min-width: 180px;
+        }
+
+        &.group {
+            display: none !important;
+        }
+
+
+        &.lastUpdate {
+            width: 40%;
+            min-width: 90px;
+        }
+        
+        &.address {
+            width: 10%;
+            min-width: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .table .clients .item{
+
+
+        &.name {
+            width: 50%;
+            min-width: 180px;
+        }
+
+        &.group {
+            display: none !important;
+        }
+
+
+        &.lastUpdate {
+            width: 40%;
+            min-width: 90px;
+        }
+        
+        &.address {
+            width: 10%;
+            min-width: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .table .clients .item{
+        
+        &.name {
+            width: 40%;
+            // min-width: 180px;
+        }
+
+        &.group {
+            display: none !important;
+        }
+
+
+        &.lastUpdate {
+            width: 30%;
+            // min-width: 90px;
+        }
+        
+        &.address {
+            width: 20%;
+            min-width: 40px;
+        }
+    }
+}
+
+@media screen  and (max-width: 720px)  {
+    .searchFrame{
+        margin: 30px 3% 20px 0%;
+    }
+
+    .pageTitle{
+        font-size: 1.5rem;
+        margin: 40px 3% 0px 0 ;
+        height:20px;
+
+    }
+
+    .table{
+        width: 94%;
+        height: calc(80vh - 70px);
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin: 10vh 3%;
+        overflow: hidden;
+    }
+    
+}

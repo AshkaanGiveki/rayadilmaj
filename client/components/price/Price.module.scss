@@ -1,0 +1,31 @@
+.container{
+
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    align-items: center;
+    position: relative;
+    .value{
+        font-size: 0.85rem;
+        min-width:80px;
+        text-align: left;
+
+        &.input{
+            border: none;
+            font-size: 0.85rem;
+            background: transparent;
+            outline: none;
+            width: 60px;
+            direction: ltr;
+            text-align: left;
+            font-family: "IranSansRegular";
+
+        }
+    }
+
+    .toman{
+        width:16px;
+        height:16px;
+        opacity: 0.6;
+    }
+}

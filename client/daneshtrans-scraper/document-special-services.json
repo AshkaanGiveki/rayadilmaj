@@ -1,0 +1,390 @@
+[
+  {
+    "name": "مدرک",
+    "specialService": null
+  },
+  {
+    "name": "ریز نمرات دبیرستان،پیش دانشگاهی (هر ترم)",
+    "specialService": "درس"
+  },
+  {
+    "name": "ریز نمرات دانشگاه (هر ترم)",
+    "specialService": "درس"
+  },
+  {
+    "name": "کارت شناسایی",
+    "specialService": null
+  },
+  {
+    "name": "کارت معافیت",
+    "specialService": null
+  },
+  {
+    "name": "کارت ملی",
+    "specialService": null
+  },
+  {
+    "name": "شناسنامه",
+    "specialService": null
+  },
+  {
+    "name": "وقایع شناسنامه (هر واقعه ازدواج، طلاق یا فوت همسر یا مشخصات هر یک از فرزندان، فوت)",
+    "specialService": null
+  },
+  {
+    "name": "ابلاغیه، اخطار قضایی",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "برگه مرخصی",
+    "specialService": null
+  },
+  {
+    "name": "توصیه نامه تحصیلی (بعد از تحصیلات سوم راهنمایی)",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "جواز اشتغال به کار",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "حکم بازنشستگی",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "دفترچه بیمه",
+    "specialService": null
+  },
+  {
+    "name": "دیپلم پایان تحصیلات متوسطه یا پیش دانشگاهی",
+    "specialService": null
+  },
+  {
+    "name": "ریز نمرات دبستان، راهنمایی (هر سال)",
+    "specialService": "درس"
+  },
+  {
+    "name": "سند تلفن همراه",
+    "specialService": null
+  },
+  {
+    "name": "فیش مستمری",
+    "specialService": "آیتم"
+  },
+  {
+    "name": "کارت بازرگانی هوشمند",
+    "specialService": null
+  },
+  {
+    "name": "کارت عضویت نظام مهندسی",
+    "specialService": null
+  },
+  {
+    "name": "کارت نظام پزشکی",
+    "specialService": null
+  },
+  {
+    "name": "کارت واکسیناسیون",
+    "specialService": "نوبت تزریق"
+  },
+  {
+    "name": "کارت پایان خدمت",
+    "specialService": null
+  },
+  {
+    "name": "گزارش ورود و خروج از کشور",
+    "specialService": "تردد"
+  },
+  {
+    "name": "گواهی اشتغال به تحصیل",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "گواهی تجرد، تولّد، فوت",
+    "specialService": null
+  },
+  {
+    "name": "گواهینامه رانندگی",
+    "specialService": null
+  },
+  {
+    "name": "گواهی ریز نمرات دانشگاهی",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "گواهی عدم خسارت خودرو",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "گواهی عدم سوء پیشینه (غیر فرمی)",
+    "specialService": "سطر"
+  },
+  {
+    "name": "گواهی عدم سوء پیشینه (فرمی)",
+    "specialService": null
+  },
+  {
+    "name": "گذرنامه",
+    "specialService": "پرفراژ"
+  },
+  {
+    "name": "روزنامه رسمی تغییرات و تصمیمات",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "اساسنامه ثبت شرکت­ها",
+    "specialService": "سطر متن اساسنامه"
+  },
+  {
+    "name": "اوراق مشارکت و اوراق قرضه",
+    "specialService": null
+  },
+  {
+    "name": "انواع قبض (مالیات، پرداخت بیمه، آب، برق و …)",
+    "specialService": null
+  },
+  {
+    "name": "برگ تشخیص مالیات، مالیات قطعی",
+    "specialService": null
+  },
+  {
+    "name": "برگ آزمایش پزشکی",
+    "specialService": null
+  },
+  {
+    "name": "برگ جلب، احضاریه",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "برگ سابقه بیمه تأمین اجتماعی",
+    "specialService": "به ازای  تغییر محل اشتغال"
+  },
+  {
+    "name": "پرانه دائم پزشکی",
+    "specialService": null
+  },
+  {
+    "name": "پروانه مطب، پروانه مسئولیت فنی",
+    "specialService": null
+  },
+  {
+    "name": "پروانه نشر و انتشارات",
+    "specialService": null
+  },
+  {
+    "name": "پروانه وکالت",
+    "specialService": null
+  },
+  {
+    "name": "پرینت­های بانکی",
+    "specialService": "تراکنش بانکی"
+  },
+  {
+    "name": "تقدیر نامه و لوح سپاس، حکم قهرمانی",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "ثبت علائم تجاری، ثبت اختراع",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "جواز دفن",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "جواز کسب پشت و رو",
+    "specialService": null
+  },
+  {
+    "name": "ریز مکالمات تلفن",
+    "specialService": "سطر تماس تلفنی"
+  },
+  {
+    "name": "سر فصل دروس",
+    "specialService": "سطر توضیحات درس"
+  },
+  {
+    "name": "سند وسائط نقلیه سبک",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "فیش حقوقی",
+    "specialService": "آیتم ریالی"
+  },
+  {
+    "name": "کارت مباشرت",
+    "specialService": null
+  },
+  {
+    "name": "کارنامه توصیفی ابتدائی",
+    "specialService": "تیم سطر توضیحات"
+  },
+  {
+    "name": "گواهی­ها (سایز A5) اعم از اشتغال به کار، فارغ التحصیلی، گواهی بانکی یا سپرده بانکی، گواهی صحت مهر",
+    "specialService": "سطر متن گواهی"
+  },
+  {
+    "name": "گواهی­ها (سایزA4 ) اعم از اشتغال به کار، فارغ التحصیلی، گواهی بانکی یا سپرده بانکی، گواهی صحت مهر",
+    "specialService": "سطر متن گواهی"
+  },
+  {
+    "name": "گواهی پایان تحصیلات کاردانی، کارشناسی، کارشناسی ارشد، دکترا",
+    "specialService": null
+  },
+  {
+    "name": "گواهی فنی و حرفه­ای",
+    "specialService": null
+  },
+  {
+    "name": "لیست بیمه کارکنان",
+    "specialService": "به ازای  نفر کارکنان"
+  },
+  {
+    "name": "آگهی تأسیس (ثبت شرکت­ها، روزنامه رسمی)",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "اجاره نامه، بنچاق و صلحنامه محضری (قدیم)",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "قرارداد بیمه",
+    "specialService": "سطر متن قرارداد"
+  },
+  {
+    "name": "بیمه شخص ثالث",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "تراز نامه شرکت­ها، اظهارنامه مالیاتی",
+    "specialService": null
+  },
+  {
+    "name": "پروانه پایان کار ساختمان",
+    "specialService": null
+  },
+  {
+    "name": "پروانه دفترچه­ای یا شناسنامه ساختمان",
+    "specialService": null
+  },
+  {
+    "name": "پروانه مهندسی",
+    "specialService": null
+  },
+  {
+    "name": "حکم اعضاء هیئت علمی، حکم کارگزینی، حکم افزایش حقوق",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "قرارداد استخدامی",
+    "specialService": "سطر متن قرارداد"
+  },
+  {
+    "name": "کارت شناسایی کارگاه",
+    "specialService": null
+  },
+  {
+    "name": "گواهی پزشکی، گزارش پزشکی، گزارش پزشکی قانونی (سایزA5 )",
+    "specialService": "سطر متن گواهی"
+  },
+  {
+    "name": "گواهی پزشکی، گزارش پزشکی، گزارش پزشکی قانونی (سایز A4)",
+    "specialService": "سطر متن گواهی"
+  },
+  {
+    "name": "گواهی حصر وراثت",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "مبایعه نامه و اجاره نامه با کد رهگیری",
+    "specialService": "سطر توضیحات موضوع"
+  },
+  {
+    "name": "موافقت اصولی",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "دفترچه وکالت",
+    "specialService": "پرفراژ"
+  },
+  {
+    "name": "تعهدنامه",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "اوراق محضری (تعهدنامه، رضایتنامه، استشهادنامه، اقرارنامه)",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "بارنامه",
+    "specialService": null
+  },
+  {
+    "name": "برگه سبز گمرکی",
+    "specialService": null
+  },
+  {
+    "name": "برگ نظریه کارشناسی ملک",
+    "specialService": null
+  },
+  {
+    "name": "پروانه بهره برداری (پشت و رو)",
+    "specialService": null
+  },
+  {
+    "name": "جواز تأسیس",
+    "specialService": null
+  },
+  {
+    "name": "سند ازدواج یا رونوشت آن",
+    "specialService": "سطر میه"
+  },
+  {
+    "name": "سند مالکیت (دفترچه­­ای)",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "هر نقل و انتقال، رهن و غیره",
+    "specialService": null
+  },
+  {
+    "name": "قیم نامه",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "مالیات بر ارث",
+    "specialService": "تیم سطر"
+  },
+  {
+    "name": "وکالتنامه (سایز A4)",
+    "specialService": "سطر متن مورد وکالت"
+  },
+  {
+    "name": "وکالتنامه سایز A3)",
+    "specialService": "سطر متن وکالتنامه"
+  },
+  {
+    "name": "اظهارنامه، تقاضای ثبت شرکت، شرکتنامه، پشت و رو",
+    "specialService": null
+  },
+  {
+    "name": "اوراق قضائی (دادنامه، رأی دادگاه، پرونده حقوقی)",
+    "specialService": "سطر متن"
+  },
+  {
+    "name": "سند طلاق یا رونوشت آن",
+    "specialService": null
+  },
+  {
+    "name": "سند مالکیت (تک برگی)",
+    "specialService": "سطر توضیحات"
+  },
+  {
+    "name": "قرارداد",
+    "specialService": "سطر متن قرارداد"
+  },
+  {
+    "name": "هزینه تصدیق کپی هر صفحه از مدرک ترجمه شده پیوست ترجمه",
+    "specialService": null
+  }
+]

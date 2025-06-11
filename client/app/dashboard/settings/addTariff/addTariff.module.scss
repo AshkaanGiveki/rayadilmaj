@@ -1,0 +1,137 @@
+@import '../../../../styles/main.scss';
+
+.addTariff {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --s: 13px;
+    --c1: #fbfbfb;
+    --c2: #ffffff;
+    --c: #0000 71%, var(--c1) 0 79%, #0000 0;
+    --_s: calc(var(--s)/2)/calc(2*var(--s)) calc(2*var(--s));
+    background:
+        linear-gradient(45deg, var(--c)) calc(var(--s)/-2) var(--_s),
+        linear-gradient(135deg, var(--c)) calc(var(--s)/2) var(--_s),
+        radial-gradient(var(--c1) 35%, var(--c2) 37%) 0 0/var(--s) var(--s);
+
+    .containerFrame {
+        background-color: transparent;
+        backdrop-filter: blur(3px);
+        box-shadow: 0px 0px 10px #ddd;
+        width: clamp(350px, 80%, 600px);
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+        position: relative;
+
+        .iconFrame {
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px dashed #ddd;
+            align-items: center;
+            // padding:10px;
+
+            >img {
+                width: 40px;
+                height: 40px;
+                opacity: 0.8;
+            }
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .selectFrame {
+            width: 100%;
+            margin: 0px;
+            min-height: 40px;
+        }
+
+        .row {
+            width: 100%;
+            height: max-content;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            direction: rtl;
+
+            .halfSelectFrame {
+                width: calc(50% - 10px);
+                margin: 0px;
+                min-height: 40px;
+            }
+        }
+
+        .registerButton {
+            width: 100%;
+            height: 40px;
+            background-color: $colMain;
+            color: black;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            font-family: IranSansMedium;
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        textArea {
+            padding: 10px 20px;
+            line-height: 20px;
+            height: 100px !important;
+        }
+    }
+
+    .progressBarWrapper {
+        width: 100%;
+        background: #eee;
+        border-radius: 4px;
+        height: 8px;
+        margin-top: 8px;
+      }
+      .progressBar {
+        height: 100%;
+        background-color: #00b894;
+        border-radius: 4px;
+        transition: width 0.2s ease;
+      }
+      
+      .loadingWrapper{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+
+        >span{
+            font-family: IranSansRegular;
+            direction:rtl;
+            text-align:center;
+        }
+      }
+}
+
+
+@media screen and (max-width:800px) {
+    .addTariff {
+        .containerFrame {
+            width: clamp(350px, 90%, 600px);
+        }
+    }
+}
