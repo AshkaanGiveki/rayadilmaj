@@ -1,0 +1,271 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/.prisma/client"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Enums
+enum PaymentFlow {
+  IN
+  OUT
+}
+
+enum PaymentMethod {
+  POS
+  TRANSFER
+  CASH
+}
+
+enum InvoiceStatus {
+  DRAFT
+  PENDING
+  TRANSLATING
+  DELIVERED
+  CANCELLED
+  COMPLETED
+}
+
+enum ServiceType {
+  base
+  trSeal
+  MJAppr
+  MFAppr
+  naatiSeal
+  extraPercent
+  specialService
+}
+
+// Core Models
+model Office {
+  id                 String   @id @default(cuid())
+  name               String
+  slang              String?
+  createdAt          DateTime @default(now())
+  clients            Client[]
+  customers          Customer[] 
+  invoices           Invoice[]
+  Tariff             Tariff[] @relation("OfficeTariffs")
+  preferredTariffId  String
+  preferredTariff    Tariff  @relation("PreferredTariff", fields: [preferredTariffId], references: [id])
+}
+
+model Client {
+  id       String @id @default(cuid())
+  office   Office @relation(fields: [officeId], references: [id])
+  officeId String
+
+  nameEn   String
+  nameFa   String
+  email    String? @unique
+  phone    String? @unique
+  password String?
+  title    String?
+
+  tokenVersion Int         @default(0)
+  role         AccessRole? @relation(fields: [roleId], references: [id])
+  roleId       String?
+
+  invoices Invoice[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AccessRole {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  permissions String[]
+
+  clients Client[]
+}
+
+model Customer {
+  id          String  @id @default(cuid())
+  name        String
+  nationalId  String?
+  phone       String?
+  mobile      String?
+  email       String?
+  address     String?
+  description String?
+
+  group       CustomerGroup? @relation(fields: [groupId], references: [id])
+  groupId     String?
+
+  joinedAt    DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  officeId    String
+  office      Office  @relation(fields: [officeId], references: [id])
+
+  invoices    Invoice[]
+}
+
+model CustomerGroup {
+  id        String     @id @default(cuid())
+  name      String
+  customers Customer[]
+}
+
+model Language {
+  id       String @id @default(cuid())
+  name     String
+  iconName String
+
+  sourceFor LanguagePair[] @relation("SourceLang")
+  targetFor LanguagePair[] @relation("TargetLang")
+}
+
+model LanguagePair {
+  id            String   @id @default(cuid())
+  source        Language @relation("SourceLang", fields: [sourceId], references: [id])
+  sourceId      String
+  destination   Language @relation("TargetLang", fields: [destinationId], references: [id])
+  destinationId String
+
+  documents  Document[]
+  TariffItem TariffItem[]
+}
+
+model DocumentType {
+  id              String       @id @default(cuid())
+  name            String
+  specialService  String? 
+  documents       Document[]
+  TariffItem      TariffItem[]
+}
+
+model Service {
+  id   String @id @default(cuid())
+  name String
+}
+
+// 🧾 Updated Invoice model with DRAFT default
+model Invoice {
+  id String @id @default(cuid())
+
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String
+
+  office   Office @relation(fields: [officeId], references: [id])
+  officeId String
+
+  client   Client? @relation(fields: [clientId], references: [id])
+  clientId String?
+
+  receptionDate  DateTime
+  deliveryDate   DateTime?
+  submissionForm String?
+  prescription   String?
+
+  status        InvoiceStatus @default(DRAFT)
+  extraExpenses Float         @default(0)
+  price         Int           @default(0)
+  discount      Int           @default(0)
+  toPay         Int           @default(0)
+  paid          Int           @default(0)
+
+  documents Document[]
+  payments  Payment[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 💳 Payment model remains the same
+model Payment {
+  id        String  @id @default(cuid())
+  invoice   Invoice @relation(fields: [invoiceId], references: [id])
+  invoiceId String
+
+  type         PaymentFlow
+  method       PaymentMethod
+  value        Float
+  date         DateTime
+  description  String?
+  attachmentId String?
+}
+
+// 📄 Updated Document model with extracted pricingRows
+model Document {
+  id        String  @id @default(cuid())
+  invoice   Invoice @relation(fields: [invoiceId], references: [id])
+  invoiceId String
+  documentType   DocumentType @relation(fields: [documentTypeId], references: [id])
+  documentTypeId String
+
+  languagePair   LanguagePair @relation(fields: [languagePairId], references: [id])
+  languagePairId String
+
+  unofficial Boolean @default(false)
+  trSeal     Boolean @default(false)
+  MJAppr     Boolean @default(false)
+  MFAppr     Boolean @default(false)
+  naatiSeal  Boolean @default(false)
+
+  emergency     Int @default(0)
+  baseNo        Int @default(0)
+  extraNo       Int @default(0)
+  extraApprNo   Int @default(0)
+  specialServNo Int @default(0)
+  price         Int @default(0)
+  extraPercent  Int @default(0)
+
+  description String?
+  isConfirmed Boolean @default(false)
+  isChanged   Boolean @default(false)
+
+  pricingRows DocumentPricingRow[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 🧾 Normalized pricing row model
+model DocumentPricingRow {
+  id         String   @id @default(cuid())
+  document   Document @relation(fields: [documentId], references: [id])
+  documentId String
+
+  key       String
+  title     String
+  unitPrice Float
+  quantity  Int
+  editable  Boolean
+  visible   Boolean
+  system    Boolean
+}
+
+model Tariff {
+  id                  String   @id @default(cuid())
+  name                String   @default("تعرفه")
+  description         String?
+  dateIssued          DateTime @default(now())
+  office              Office   @relation("OfficeTariffs", fields: [officeId], references: [id]) 
+  officeId            String
+  private             Boolean  @default(true)
+  TariffItem          TariffItem[]
+  preferredByOffices  Office[] @relation("PreferredTariff") // 👈 this completes the many-to-one
+}
+
+
+
+model TariffItem {
+  id String @id @default(cuid())
+
+  tariff   Tariff @relation(fields: [tariffId], references: [id])
+  tariffId String
+
+  langPair   LanguagePair @relation(fields: [langPairId], references: [id])
+  langPairId String
+
+  documentType   DocumentType @relation(fields: [documentTypeId], references: [id])
+  documentTypeId String
+  service        ServiceType
+  price          Int          @default(0)
+}
