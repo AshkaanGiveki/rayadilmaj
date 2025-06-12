@@ -36,7 +36,6 @@ export default function Login() {
 
 
     try {
-      alert (process.env.NEXT_PUBLIC_BACKEND_URL);
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`,
         {
