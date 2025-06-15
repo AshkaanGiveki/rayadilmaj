@@ -10,6 +10,7 @@ import TextInput from "@/components/textInput/TextInput";
 import { useSocket } from "@/context/SocketContext";
 import { useAuth } from "@/context/AuthContext";
 import { createSocket } from "@/lib/createSocket";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const { loggedIn, loading, setAccessToken, fetchUser } = useAuth();
@@ -79,6 +80,7 @@ export default function Login() {
     } catch (err) {
       console.error("Login failed:", err);
       setError("❌ ورود ناموفق بود. ایمیل یا رمز عبور اشتباه است.");
+      toast.error("ورود ناموفق بود. ایمیل یا رمز عبور اشتباه است.");
     }
   };
 
@@ -115,7 +117,7 @@ export default function Login() {
             />
           </div>
 
-          {error && <p className={styles.errorMessage}>{error}</p>}
+         // {error && <p className={styles.errorMessage}>{error}</p>}
 
           <button type="submit" className="ISBo">ورود</button>
         </form>
