@@ -117,8 +117,6 @@ export default function Login() {
             />
           </div>
 
-         // {error && <p className={styles.errorMessage}>{error}</p>}
-
           <button type="submit" className="ISBo">ورود</button>
         </form>
       </div>
